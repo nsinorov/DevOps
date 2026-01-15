@@ -27,7 +27,3 @@ class Program
         Console.WriteLine($"\nElement at row 2, column 3: {value}");
     }
 }
-
-
-// hello?
-// test
