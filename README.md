@@ -27,3 +27,5 @@ Creating and managing Continuous Integration (CI) processes
 Working with CI/CD pipelines
 
 Creating conditions for automated testing
+
+
