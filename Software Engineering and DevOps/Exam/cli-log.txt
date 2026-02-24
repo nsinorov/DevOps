@@ -1,0 +1,373 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260221104759
+Username: DESKTOP-NGVD83T\Nikolay Sinorov
+RunAs User: DESKTOP-NGVD83T\Nikolay Sinorov
+Configuration Name: 
+Machine: DESKTOP-NGVD83T (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9932
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git checkout feature/new-ui-button
+branch 'feature/new-ui-button' set up to track 'origin/feature/new-ui-button'.
+Switched to a new branch 'feature/new-ui-button'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git branch
+* feature/new-ui-button
+  main
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch feature/new-ui-button
+Your branch is up to date with 'origin/feature/new-ui-button'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cli-log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch feature/new-ui-button
+Your branch is up to date with 'origin/feature/new-ui-button'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   cli-log.txt
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update index.html file"
+[feature/new-ui-button 38c7c05] update index.html file
+ 2 files changed, 27 insertions(+), 4 deletions(-)
+ create mode 100644 cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "script.js file"
+[feature/new-ui-button 1603eaa] script.js file
+ 2 files changed, 53 insertions(+), 3 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch feature/new-ui-button
+Your branch is ahead of 'origin/feature/new-ui-button' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cli-log.txt
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update style.css"
+[feature/new-ui-button 835dc24] update style.css
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git log --oneline
+835dc24 (HEAD -> feature/new-ui-button) update style.css
+1603eaa script.js file
+38c7c05 update index.html file
+ab9f6c3 (origin/main, origin/feature/new-ui-button, origin/chore/user-service-refactor, origin/bugfix/home-load, origin/
+HEAD, main) Delete LICENSE
+7ddd1ac Add files
+8d45919 Initial commit
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~3
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch feature/new-ui-button
+Your branch is ahead of 'origin/feature/new-ui-button' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cli-log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> echo cli-log.txt >> .gitignore
+>> ParameterBinding(Out-File): name="InputObject"; value="cli-log.txt"
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git restore cli-log.txt
+Unlink of file 'cli-log.txt' failed. Should I try again? (y/n) y
+Unlink of file 'cli-log.txt' failed. Should I try again? (y/n) n
+error: unable to unlink old 'cli-log.txt': Invalid argument
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rm --cached cli-log.txt
+rm 'cli-log.txt'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .gitignore
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "chore: ignore cli log file"
+[feature/new-ui-button e17e0bd] chore: ignore cli log file
+ 2 files changed, 63 deletions(-)
+ create mode 100644 .gitignore
+ delete mode 100644 cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch feature/new-ui-button
+Your branch is ahead of 'origin/feature/new-ui-button' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cli-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> type .gitignore
+cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/feature/new-ui-button.
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~5
+Successfully rebased and updated refs/heads/feature/new-ui-button.
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~5
+error: The following untracked working tree files would be overwritten by checkout:
+        cli-log.txt
+Please move or remove them before you switch branches.
+Aborting
+error: could not detach HEAD
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Rename-Item .\cli-log.txt .\cli-log-work.txt
+Rename-Item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ Rename-Item .\cli-log.txt .\cli-log-work.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\Nikola...6-1\cli-log.txt:String) [Rename-Item], IOException
+    + FullyQualifiedErrorId : RenameItemIOError,Microsoft.PowerShell.Commands.RenameItemCommand
+Rename-Item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ Rename-Item .\cli-log.txt .\cli-log-work.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\Nikola...6-1\cli-log.txt:String) [Rename-Item], IOException
+    + FullyQualifiedErrorId : RenameItemIOError,Microsoft.PowerShell.Commands.RenameItemCommand
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260221111146
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260221111506
+Username: DESKTOP-NGVD83T\Nikolay Sinorov
+RunAs User: DESKTOP-NGVD83T\Nikolay Sinorov
+Configuration Name: 
+Machine: DESKTOP-NGVD83T (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9932
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git log --oneline
+089be2e (HEAD -> feature/new-ui-button) chore: ignore cli log file
+2756d39 feat: add new UI button # This is a combination of 3 commits.
+ab9f6c3 (origin/main, origin/feature/new-ui-button, origin/chore/user-service-refactor, origin/bugfix/home-load, origin/HEAD, main) Delete LICENSE
+7ddd1ac Add files
+8d45919 Initial commit
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 2.01 KiB | 2.01 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nsinorov/SEDO-Regular-Exam-2026-1
+   ab9f6c3..089be2e  feature/new-ui-button -> feature/new-ui-button
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> clear
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git branch -vv
+* feature/new-ui-button 089be2e [origin/feature/new-ui-button] chore: ignore cli log file
+  main                  ab9f6c3 [origin/main] Delete LICENSE
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git checkout bugfix/home-load
+branch 'bugfix/home-load' set up to track 'origin/bugfix/home-load'.
+Switched to a new branch 'bugfix/home-load'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Get-Content .\cli-log.txt -Tail 5
+* feature/new-ui-button 089be2e [origin/feature/new-ui-button] chore: ignore cli log file
+  main                  ab9f6c3 [origin/main] Delete LICENSE
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git checkout bugfix/home-load
+branch 'bugfix/home-load' set up to track 'origin/bugfix/home-load'.
+Switched to a new branch 'bugfix/home-load'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update index.html file"
+[bugfix/home-load e1f5e65] update index.html file
+ 2 files changed, 208 insertions(+), 5 deletions(-)
+ create mode 100644 cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update script.js"
+[bugfix/home-load a3575d8] update script.js
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update style.css"
+[bugfix/home-load 9188cc7] update style.css
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git log --oneline
+9188cc7 (HEAD -> bugfix/home-load) update style.css
+a3575d8 update script.js
+e1f5e65 update index.html file
+ab9f6c3 (origin/main, origin/chore/user-service-refactor, origin/bugfix/home-load, origin/HEAD, main) Delete LICENSE
+7ddd1ac Add files
+8d45919 Initial commit
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~3
+error: Your local changes to the following files would be overwritten by checkout:
+        cli-log.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+error: could not detach HEAD
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git ls-files cli-log.txt
+cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rm --cached cli-log.txt
+rm 'cli-log.txt'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> type .gitignore
+type : Cannot find path 'C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1\.gitignore' because it does not 
+exist.
+At line:1 char:1
++ type .gitignore
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Nikola...26-1\.gitignore:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+type : Cannot find path 'C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1\.gitignore' because it does not exist.
+At line:1 char:1
++ type .gitignore
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Nikola...26-1\.gitignore:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> "cli-log.txt" | Out-File -Encoding utf8 .gitignore
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Get-Content .gitignore
+cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Get-Content .gitignore
+cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .gitignore
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "chore: ignore cli log file"
+[bugfix/home-load e886681] chore: ignore cli log file
+ 2 files changed, 1 insertion(+), 217 deletions(-)
+ create mode 100644 .gitignore
+ delete mode 100644 cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git status
+On branch bugfix/home-load
+Your branch is ahead of 'origin/bugfix/home-load' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~3
+Unlink of file 'cli-log.txt' failed. Should I try again? (y/n) Stop-Transcript
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Unlink of file 'cli-log.txt' failed. Should I try again? (y/n) n
+error: unable to unlink old 'cli-log.txt': Invalid argument
+error: could not detach HEAD
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260221113155
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260221113646
+Username: DESKTOP-NGVD83T\Nikolay Sinorov
+RunAs User: DESKTOP-NGVD83T\Nikolay Sinorov
+Configuration Name: 
+Machine: DESKTOP-NGVD83T (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9932
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Nikolay Sinorov\Desktop\cli-log.txt
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git push --force-with-lease
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 3.01 KiB | 3.01 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/nsinorov/SEDO-Regular-Exam-2026-1
+   ab9f6c3..4b6dd52  bugfix/home-load -> bugfix/home-load
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git branch -a
+* bugfix/home-load
+  feature/new-ui-button
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/bugfix/home-load
+  remotes/origin/chore/user-service-refactor
+  remotes/origin/feature/new-ui-button
+  remotes/origin/main
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git checkout chore/user-service-refactor
+branch 'chore/user-service-refactor' set up to track 'origin/chore/user-service-refactor'.
+Switched to a new branch 'chore/user-service-refactor'
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> clear
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update index.html"
+[chore/user-service-refactor a50706f] update index.html
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update script.js"
+[chore/user-service-refactor 6e47525] update script.js
+ 1 file changed, 14 insertions(+), 4 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git add .
+
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git commit -m "update style.css"
+[chore/user-service-refactor 99cb8a8] update style.css
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git log --oneline
+99cb8a8 (HEAD -> chore/user-service-refactor) update style.css
+6e47525 update script.js
+a50706f update index.html
+ab9f6c3 (origin/main, origin/chore/user-service-refactor, origin/HEAD, main) Delete LICENSE
+7ddd1ac Add files
+8d45919 Initial commit
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git rebase -i HEAD~3
+[detached HEAD 37a32ca] Refactor handlers
+ Date: Sat Feb 21 11:40:17 2026 +0200
+ 3 files changed, 24 insertions(+), 14 deletions(-)
+Successfully rebased and updated refs/heads/chore/user-service-refactor.
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git log --oneline
+37a32ca (HEAD -> chore/user-service-refactor) Refactor handlers
+ab9f6c3 (origin/main, origin/chore/user-service-refactor, origin/HEAD, main) Delete LICENSE
+7ddd1ac Add files
+8d45919 Initial commit
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> git push --force-with-lease
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 773 bytes | 773.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nsinorov/SEDO-Regular-Exam-2026-1
+   ab9f6c3..37a32ca  chore/user-service-refactor -> chore/user-service-refactor
+PS C:\Users\Nikolay Sinorov\Desktop\Exam\SEDO-Regular-Exam-2026-1> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260221115744
+**********************
