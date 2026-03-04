@@ -29,3 +29,7 @@ Working with CI/CD pipelines
 Creating conditions for automated testing
 
 
+# 📜 Certificates
+
+<img width="600" height="1045" alt="Screenshot 2026-02-28 at 6 09 44 AM" src="https://github.com/user-attachments/assets/bbb9646a-5712-4f2e-a8a4-b51244639848" />
+
