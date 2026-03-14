@@ -1,0 +1,1 @@
+db.createUser({ user: "mongoadmin", pwd: "mongoadminpass", roles: [{ role: 'root', db: "admin" }] })
