@@ -1,0 +1,25 @@
+services:
+  taskboard:
+    ports:
+      - 5002:80
+    container_name: web_app
+    restart: on-failure
+    networks:
+      - taskboard_network
+    image: nsinorov123/taskboard:0.0.1
+  server:
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=yourStrongPassword12#
+    ports:
+      - 1433:1433
+    volumes:
+      - sqldata:/var/opt/mssql
+    networks:
+      - taskboard_network
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server
+networks:
+  taskboard_network:
+volumes:
+  sqldata:
