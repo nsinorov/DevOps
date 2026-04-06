@@ -4,3 +4,7 @@
 .terraform/
 .terraform/
 .DS_Store
+"*.wt" 
+"mongo/journal/" 
+"**/journal/" 
+"**/data/" 
