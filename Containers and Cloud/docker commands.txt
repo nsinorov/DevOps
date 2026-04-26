@@ -1,0 +1,4 @@
+docker login
+docker build -t django_image .
+docker run -d -p 8000:8000 --name django_app django_image
+docker ps
